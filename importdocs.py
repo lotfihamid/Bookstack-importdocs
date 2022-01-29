@@ -16,7 +16,7 @@ def insert_book(bookname):
     buffer = BytesIO()
     crlbook = pycurl.Curl()
     crlbook.setopt(crlbook.URL, 'http://192.168.1.3:6875/api/books')
-    crlbook.setopt(pycurl.HTTPHEADER, ['Authorization: Token caCi3JqYB6SqN4Y9OgZPb83S2gXzafu8:ndPttLatqiWvkUbP5wf4A0ImGH4TTmFb'])
+    crlbook.setopt(pycurl.HTTPHEADER, ['Authorization: Token caCi3JqYB6---------------:ndPttLatqiWv--------------'])
     crlbook.setopt(crlbook.WRITEDATA, buffer)
     pfbook = urlencode(databook)
     crlbook.setopt(crlbook.POSTFIELDS, pfbook)
@@ -51,7 +51,7 @@ def insert_page(bookid,pagename,pagehtml):
     }
     crlpage = pycurl.Curl()
     crlpage.setopt(crlpage.URL, 'http://192.168.1.3:6875/api/pages')
-    crlpage.setopt(pycurl.HTTPHEADER, ['Authorization: Token caCi3JqYB6SqN4Y9OgZPb83S2gXzafu8:ndPttLatqiWvkUbP5wf4A0ImGH4TTmFb'])
+    crlpage.setopt(pycurl.HTTPHEADER, ['Authorization: Token caCi3JqYB6---------------:ndPttLatqiWv--------------'])
     pf = urlencode(datapage)
     crlpage.setopt(crlpage.POSTFIELDS, pf)
     crlpage.perform()
